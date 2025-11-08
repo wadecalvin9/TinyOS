@@ -1,0 +1,198 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f32e;
+    color: #000000;
+    overflow: hidden;
+}
+
+/* Layout container */
+.settings-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background-color: #8787874e;
+    backdrop-filter: blur(10px);
+    border-right: 1px solid #ddd;
+    padding: 20px 0;
+    box-shadow: 0px 0px 1px black;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Sidebar title */
+.sidebar-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    color: #0078d7;
+}
+
+/* Menu container */
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu items (each <a>) */
+.menu-item {
+    text-decoration: none;
+    color: inherit;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    border-radius: 6px;
+}
+
+/* Hover effect */
+.menu-item:hover {
+    background-color: #95959668;
+    backdrop-filter: blur(10px) contrast(110%) brightness(100%);
+}
+
+/* Active link */
+.menu-item.active {
+    background-color: #004294b4;
+    backdrop-filter: blur(10px) contrast(110%) brightness(100%);
+    color: #fff;
+}
+
+/* Icon styling */
+.menu-item i {
+    width: 20px;
+    font-size: 1.1em;
+}
+
+/* Content area */
+.content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.05);
+}
+
+/* Each section inside content */
+.section {
+    display: none;
+
+}
+
+.section.active {
+    display: block;
+}
+
+/* Section headers & text */
+.section h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #343434;
+}
+
+.section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.imagecards {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+
+
+
+.cards label {
+    position: relative;
+    flex: 0 0 220px;
+    height: 130px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cards label input[type="radio"] {
+    display: none;
+}
+
+.cards label img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cards label:hover {
+    transform: scale(1.03);
+}
+
+
+
+.cards label {
+    position: relative;
+    flex: 0 0 220px;
+    height: 130px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cards label input[type="radio"] {
+    display: none;
+}
+
+.cards label img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid transparent;
+    border-radius: 10px;
+}
+
+.cards label input[type="radio"]:checked+img {
+    border: 3px solid rgb(6, 205, 255);
+    box-shadow: 0 0 0 3px rgb(0, 204, 255);
+    transform: scale(1.03);
+}
+
+.sbt{
+margin-top: 15px;
+background-color: #5e5f6045;
+padding: 9px;
+color: #fffdfd;
+border-radius: 10px;
+backdrop-filter: blur(20px) contrast(110%) brightness(100%);
+cursor: pointer;
+}
+.sbt:hover{
+
+   background-color: #8a8b8d45;
+    color: rgb(174, 24, 194);
+    backdrop-filter: blur(10px) contrast(110%) brightness(90%);
+
+}
